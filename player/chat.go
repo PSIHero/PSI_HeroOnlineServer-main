@@ -1349,10 +1349,10 @@ func (h *ChatHandler) cmdMessage(s *database.Socket, data []byte) ([]byte, error
 			if database.DungeonEvents[s.Character.ID] == nil {
 				return messaging.InfoMessage("You can enter to dungeon"), nil
 			}
-			if time.Since(database.DungeonEvents[s.Character.ID].LastStartedTime.Time.Add(time.Hour*time.Duration(2))) >= 0 {
+			if time.Since(database.DungeonEvents[s.Character.ID].LastStartedTime.Time.Add(time.Hour*time.Duration(1))) >= 0 {
 				return messaging.InfoMessage("You can enter to dungeon"), nil
 			}
-			durr := time.Since(database.DungeonEvents[s.Character.ID].LastStartedTime.Time.Add(time.Hour * time.Duration(2)))
+			durr := time.Since(database.DungeonEvents[s.Character.ID].LastStartedTime.Time.Add(time.Hour * time.Duration(1)))
 			// durr to hour min and sec write in console
 			return messaging.InfoMessage("You can enter dungeon in " + utils.DurationToString(durr)), nil
 		case "droprate":
@@ -1442,7 +1442,7 @@ func (h *ChatHandler) cmdMessage(s *database.Socket, data []byte) ([]byte, error
 				leaderCanJoin := false
 				if database.DungeonEvents[party.Leader.ID] == nil { //NEVER JOINED!!!
 					leaderCanJoin = true
-				} else if time.Since(database.DungeonEvents[party.Leader.ID].LastStartedTime.Time.Add(time.Hour*time.Duration(2))) >= 0 {
+				} else if time.Since(database.DungeonEvents[party.Leader.ID].LastStartedTime.Time.Add(time.Hour*time.Duration(1))) >= 0 {
 					leaderCanJoin = true
 				}
 				if !leaderCanJoin {
@@ -1461,7 +1461,7 @@ func (h *ChatHandler) cmdMessage(s *database.Socket, data []byte) ([]byte, error
 					maxLevel = 200
 				} else if party.Leader.Level >= 201 && party.Leader.Level <= 300 { //DARKNESS
 					dungeonType = 3
-					minLevel = 250
+					minLevel = 235
 					maxLevel = 300
 				}
 				_ = dungeonType //RESERVED
@@ -1470,7 +1470,7 @@ func (h *ChatHandler) cmdMessage(s *database.Socket, data []byte) ([]byte, error
 					canJoin := false
 					if database.DungeonEvents[char.ID] == nil { //NEVER JOINED!!!
 						canJoin = true
-					} else if time.Since(database.DungeonEvents[char.ID].LastStartedTime.Time.Add(time.Hour*time.Duration(2))) >= 0 {
+					} else if time.Since(database.DungeonEvents[char.ID].LastStartedTime.Time.Add(time.Hour*time.Duration(1))) >= 0 {
 						canJoin = true
 					}
 					return char.Character.Level >= minLevel && char.Character.Level <= maxLevel && char.IsOnline && canJoin && char.Accepted

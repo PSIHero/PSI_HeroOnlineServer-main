@@ -96,7 +96,7 @@ func (t *Stat) Create(c *Character) error {
 	t.ID = c.ID
 	t.StatPoints = 4
 	t.NaturePoints = 0
-	t.Honor = 10000
+	t.Honor = 1000
 	return db.Insert(t)
 }
 
@@ -129,7 +129,7 @@ func (t *Stat) Calculate() error {
 
 	temp := *t
 	stStat := startingStats[c.Type]
-	temp.MaxHP = stStat.MaxHP + 3500*temp.STR
+	temp.MaxHP = stStat.MaxHP + 1730*temp.STR
 	temp.MaxCHI = stStat.MaxCHI
 	temp.STRBuff = 0
 	temp.DEXBuff = 0
@@ -143,10 +143,10 @@ func (t *Stat) Calculate() error {
 	temp.MinArtsATK = temp.STR
 	temp.MaxArtsATK = temp.STR
 	temp.ArtsATKRate = 0
-	temp.DEF = 7 * temp.DEX
+	temp.DEF = 5 * temp.DEX
 	temp.AttackSpeed = stStat.AttackSpeed
 	temp.DefRate = 0
-	temp.ArtsDEF = 3*temp.INT + 3*temp.DEX
+	temp.ArtsDEF = 4*temp.INT + 4*temp.DEX
 	temp.ArtsDEFRate = 0
 	temp.Accuracy = int(float32(temp.STR) * 3)
 	temp.Dodge = 0
@@ -160,10 +160,23 @@ func (t *Stat) Calculate() error {
 	temp.Paratime = 0
 	temp.ConfusionTime = 0
 	temp.CHIRecoveryRate = 10
-	temp.HPRecoveryRate = 10 + 550*temp.STR
+	temp.HPRecoveryRate = 10 + 250*temp.STR
 	temp.GoldRate = 0
 	temp.ExpRate = 0
 	temp.DropRate = 0
+	if c.Socket.User.UserType < 2 {
+		c.RunningSpeed = 5.6
+		skills, err := FindSkillsByID(c.ID)
+		if err == nil {
+			skillSlots, err := skills.GetSkills()
+			if err == nil {
+				set := skillSlots.Slots[7]
+				if set != nil {
+					c.RunningSpeed = 10.0 + (float64(set.Skills[0].Plus) * 0.2)
+				}
+			}
+		}
+	}
 
 	c.BuffEffects(&temp)
 	c.JobPassives(&temp)
@@ -182,28 +195,28 @@ func (t *Stat) Calculate() error {
 	totalWater := temp.Water + temp.WaterBuff
 	totalFire := temp.Fire + temp.FireBuff
 
-	temp.DEF += temp.DEXBuff + 2*totalWind + 1*totalWater + 1*totalFire
-	temp.DEF += temp.DEF * temp.DefRate / 100
-	temp.ArtsDEF += 2*temp.INTBuff + temp.DEXBuff + 1*totalWind + 2*totalWater + 1*totalFire
-	temp.ArtsDEF += temp.ArtsDEF * temp.ArtsDEFRate / 100
+	temp.DEF += temp.DEXBuff + 1*totalWind + 3*totalWater + 1*totalFire
+	temp.DEF += temp.DEF * temp.DefRate / 156
+	temp.ArtsDEF += 2*temp.INTBuff + temp.DEXBuff + 1*totalWind + 3*totalWater + 1*totalFire
+	temp.ArtsDEF += temp.ArtsDEF * temp.ArtsDEFRate / 200
 
 	c.ItemEffects(&temp, 400, 401) // MARBLES(4-5)
 
 	totalSTR := temp.STR + temp.STRBuff
 	totalINT := temp.INT + temp.INTBuff
 
-	temp.MaxHP += 21 * totalSTR
-	temp.MaxCHI += 3 * totalINT
+	temp.MaxHP += 14*totalSTR + 1400*totalWind
+	temp.MaxCHI += 3*totalINT + 200*totalWater
 
 	temp.MinATK += temp.STRBuff + 1*totalWind + 1*totalWater + 2*totalFire
 	temp.MinATK += temp.MinATK * temp.ATKRate / 100
 	temp.MaxATK += temp.STRBuff + 1*totalWind + 1*totalWater + 2*totalFire
 	temp.MaxATK += temp.MaxATK * temp.ATKRate / 100
 
-	temp.MinArtsATK += temp.STRBuff + 2*totalINT + int(float32(totalINT*temp.MinATK)/200)
-	temp.MinArtsATK += temp.MinArtsATK * temp.ArtsATKRate / 100
-	temp.MaxArtsATK += temp.STRBuff + 2*totalINT + int(float32(totalINT*temp.MaxATK)/200)
-	temp.MaxArtsATK += temp.MaxArtsATK * temp.ArtsATKRate / 100
+	temp.MinArtsATK += temp.STRBuff + 2*totalINT + int(float32(totalINT*temp.MinATK)/515)
+	temp.MinArtsATK += temp.MinArtsATK * temp.ArtsATKRate / 200
+	temp.MaxArtsATK += temp.STRBuff + 2*totalINT + int(float32(totalINT*temp.MaxATK)/515)
+	temp.MaxArtsATK += temp.MaxArtsATK * temp.ArtsATKRate / 200
 
 	temp.Accuracy += int(float32(temp.STRBuff) * 0.925)
 	//temp.Dodge += temp.DEXBuff
