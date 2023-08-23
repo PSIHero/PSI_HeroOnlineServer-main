@@ -821,6 +821,7 @@ func (pet *PetSlot) CastSkill(owner *Character, skillID int) []byte {
 	//})
 
 	resp.Concat(petSlot.GetData(0x0A))
+	resp.Concat(pet.PetOwner.TogglePet())
 	return resp
 }
 func (pet *PetSlot) CastSkillToPlayer(owner *Character, skillID int) []byte {

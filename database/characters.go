@@ -6424,7 +6424,7 @@ func (c *Character) DowngradeSkill(slotIndex, skillIndex byte) ([]byte, error) {
 		requiredSP = SkillPTS["sjp"][skill.Plus-1]
 	} else if info.ID >= 29000 && info.ID <= 29007 && skill.Plus > 0 { // 2nd job passives (divine)
 		requiredSP = SkillPTS["dsjp"][skill.Plus-1]
-	} else if info.ID >= 20193 && info.ID <= 20217 { // 3nd job passives (darkness)
+	} else if info.ID >= 20193 && info.ID <= 30217 { // 3nd job passives (darkness)
 		requiredSP = SkillPTS["dsjp"][skill.Plus]
 	}
 

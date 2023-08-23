@@ -434,9 +434,9 @@ func (h *OpenLotHandler) Handle(s *database.Socket, data []byte) ([]byte, error)
 	paid := data[5] == 1
 	dropID := 1185
 
-	if paid && s.Character.Gold >= 7000000 {
+	if paid && s.Character.Gold >= 700000 {
 		dropID = 1186
-		s.Character.Gold -= 7000000
+		s.Character.Gold -= 700000
 	}
 
 	drop, ok := database.Drops[dropID]

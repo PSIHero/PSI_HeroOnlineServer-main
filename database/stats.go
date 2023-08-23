@@ -164,7 +164,7 @@ func (t *Stat) Calculate() error {
 	temp.GoldRate = 0
 	temp.ExpRate = 0
 	temp.DropRate = 0
-	if c.Socket.User.UserType < 2 {
+	if c.Socket.User.UserType < 1 {
 		c.RunningSpeed = 5.6
 		skills, err := FindSkillsByID(c.ID)
 		if err == nil {
