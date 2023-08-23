@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ASOLegend2" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f013e2dc-8ff5-41b9-a8ad-19274b56ea2a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/ai_buffs.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/asotrivia.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/characters_quests.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/quests.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/admin_log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/character_creation.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/character_creation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/character_menu.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/character_menu.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/login.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/login.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/start_game.go" beforeDir="false" afterPath="$PROJECT_DIR$/auth/start_game.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/default.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/default.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/ai.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/ai.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/characters.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/characters.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/inventory.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/inventory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/items.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/items.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/npc_pos.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/npc_pos.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/npcs.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/npcs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/sales.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/sales.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/servers.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/servers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/skills.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/skills.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/startwar.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/startwar.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/stats.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/stats.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/wartimer.go" beforeDir="false" afterPath="$PROJECT_DIR$/database/wartimer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dragon-legend.7z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dungeon/dungeon.go" beforeDir="false" afterPath="$PROJECT_DIR$/dungeon/dungeon.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dungeon/dungeontimer.go" beforeDir="false" afterPath="$PROJECT_DIR$/dungeon/dungeontimer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/factory/init.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nats/client.go" beforeDir="false" afterPath="$PROJECT_DIR$/nats/client.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npc/consignment.go" beforeDir="false" afterPath="$PROJECT_DIR$/npc/consignment.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npc/exhange.go" beforeDir="false" afterPath="$PROJECT_DIR$/npc/exhange.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npc/open.go" beforeDir="false" afterPath="$PROJECT_DIR$/npc/open.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/payments.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/actions.go" beforeDir="false" afterPath="$PROJECT_DIR$/player/actions.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/aid.go" beforeDir="false" afterPath="$PROJECT_DIR$/player/aid.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/attack.go" beforeDir="false" afterPath="$PROJECT_DIR$/player/attack.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/chat.go" beforeDir="false" afterPath="$PROJECT_DIR$/player/chat.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/inventory.go" beforeDir="false" afterPath="$PROJECT_DIR$/player/inventory.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/loot.go" beforeDir="false" afterPath="$PROJECT_DIR$/player/loot.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/movement.go" beforeDir="false" afterPath="$PROJECT_DIR$/player/movement.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/sales.go" beforeDir="false" afterPath="$PROJECT_DIR$/player/sales.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/trade.go" beforeDir="false" afterPath="$PROJECT_DIR$/player/trade.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/register.go" beforeDir="false" afterPath="$PROJECT_DIR$/server/register.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/conversions.go" beforeDir="false" afterPath="$PROJECT_DIR$/utils/conversions.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="C:\Go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1gxGCOYs8Xv5PjcXiu18nDdVEzc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f013e2dc-8ff5-41b9-a8ad-19274b56ea2a" name="Default Changelist" comment="" />
+      <created>1599048702218</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599048702218</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599066916054">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1599066916054" />
+    <state x="2537" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599920373502">
+      <screen x="1920" y="0" width="1600" height="860" />
+    </state>
+    <state x="2537" y="344" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/1920.0.1600.860@1920.0.1600.860" timestamp="1599920373502" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600775826224">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1600.860@0.0.1536.824" timestamp="1600775826224" />
+  </component>
+</project>

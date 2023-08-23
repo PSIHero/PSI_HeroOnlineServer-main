@@ -1,0 +1,8 @@
+project_name: PsiHeroServer
+builds:
+  - env:
+    goos:
+    - linux
+    - windows
+    goarch:
+    - amd64
