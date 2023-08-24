@@ -160,7 +160,7 @@ func (t *Stat) Calculate() error {
 	temp.Paratime = 0
 	temp.ConfusionTime = 0
 	temp.CHIRecoveryRate = 10
-	temp.HPRecoveryRate = 10 + 251*temp.STR
+	temp.HPRecoveryRate = 10 + 250*temp.STR
 	temp.GoldRate = 0
 	temp.ExpRate = 0
 	temp.DropRate = 0
