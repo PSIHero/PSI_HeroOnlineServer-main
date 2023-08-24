@@ -96,7 +96,7 @@ func (t *Stat) Create(c *Character) error {
 	t.ID = c.ID
 	t.StatPoints = 4
 	t.NaturePoints = 0
-	t.Honor = 1000
+	t.Honor = 10000
 	return db.Insert(t)
 }
 
@@ -164,15 +164,22 @@ func (t *Stat) Calculate() error {
 	temp.GoldRate = 0
 	temp.ExpRate = 0
 	temp.DropRate = 0
-	if c.Socket.User.UserType < 1 {
-		c.RunningSpeed = 5.6
-		skills, err := FindSkillsByID(c.ID)
-		if err == nil {
-			skillSlots, err := skills.GetSkills()
-			if err == nil {
-				set := skillSlots.Slots[7]
-				if set != nil {
-					c.RunningSpeed = 10.0 + (float64(set.Skills[0].Plus) * 0.2)
+
+	if c != nil {
+		if c.Socket != nil {
+			if c.Socket.User != nil {
+				if c.Socket.User.UserType < 2 {
+					c.RunningSpeed = 5.6
+					skills, err := FindSkillsByID(c.ID)
+					if err == nil {
+						skillSlots, err := skills.GetSkills()
+						if err == nil {
+							set := skillSlots.Slots[7]
+							if set != nil && set.BookID != 0 {
+								c.RunningSpeed = 10.0 + (float64(set.Skills[0].Plus) * 0.2)
+							}
+						}
+					}
 				}
 			}
 		}
@@ -184,6 +191,7 @@ func (t *Stat) Calculate() error {
 	c.AdditionalDropMultiplier = 0
 	c.AdditionalExpMultiplier = 0
 	c.AdditionalRunningSpeed = 0
+
 	c.ItemEffects(&temp, 0, 9)         // NORMAL ITEMS
 	c.ItemEffects(&temp, 307, 315)     // HT ITEMS
 	c.ItemEffects(&temp, 0x0B, 0x43)   // INV BUFFS1

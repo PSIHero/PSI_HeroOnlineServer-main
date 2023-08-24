@@ -1705,6 +1705,8 @@ func (h *ChatHandler) cmdMessage(s *database.Socket, data []byte) ([]byte, error
 				database.GetAllShopItems()
 			case "shoptable":
 				database.RefreshAllShops()
+			case "events":
+				database.GetAllEvents()
 			case "exp":
 				database.GetExps()
 			case "skills":
